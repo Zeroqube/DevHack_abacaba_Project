@@ -3,15 +3,29 @@ import random
 
 
 def revert(numstr):
-    string = ""
-    for i in numstr:
-        string += i.decode('windows-1251')
-    return string
 
-def picture_to_string(key, x, y, n):
+    return numstr
+
+
+def picture_to_string(key, x, y):
+    global pixels
+    visited = {}
     numstr = []
     random.seed(key)
-    for i in range(n):
+    while len(numstr) < 1 or numstr[-1] != 0:
         p = random.randint(0, x * y)
-        numstr.append(R % 8 + G % 4 + B % 8)
-    return numstr
+        while p in visited:
+            p = random.randint(0, x * y)
+        R, G, B = pixels[p // y, p % y]
+        numstr.append(R % 8 * 32 + G % 4 * 8 + B % 8)
+    return revert(numstr)
+
+
+name = input('введите путь к изображению')
+im = Image.open(name)
+pixels = im.load()
+x, y = im.size
+key = input('введите ключ')
+text = picture_to_string(key, x, y)
+print(text)
+
