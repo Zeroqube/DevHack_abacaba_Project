@@ -1,4 +1,5 @@
 from PIL import pillow
+import random
 
 def change(ch, x, y):
     global pixels
@@ -17,5 +18,11 @@ def convert(string):
         numstr.append(i)
     return numstr
 
-
-print(convert(input()))
+def string_to_picture(key, text):
+    global pixels
+    global x
+    global y
+    random.seed(key)
+    for c in text:
+        p = random.randint(0, x * y)
+        change(p // y, p % y, c)
