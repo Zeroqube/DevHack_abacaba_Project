@@ -92,7 +92,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="resultImage">
       <property name="geometry">
        <rect>
         <x>570</x>
@@ -102,7 +102,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string/>
       </property>
      </widget>
     </widget>
