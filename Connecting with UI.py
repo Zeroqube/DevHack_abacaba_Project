@@ -10,7 +10,7 @@ class MyWidget(QMainWindow):
         uic.loadUi('Interface.ui', self)  # Загружаем дизайн
         self.outsideImage.clicked.connect(self.convert)
         self.outsideText.clicked.connect(self.get_text)
-        # Обратите внимание: имя элемента такое же как в QTDesigner
+        self.saveImage.clicked.connect(self.get_image)
 
     def convert(self):
         image_name = QFileDialog.getOpenFileName(self, 'Выбрать картинку', '', 'Картинка (*.jpg);;Все файлы (*)')[0]
@@ -22,6 +22,12 @@ class MyWidget(QMainWindow):
         with open(text_name) as file:
             text = file.read()
             self.plainTextEdit.insertPlainText(text)
+
+    def get_image(self):
+        # image = ''  # picture after encrypting
+        # res_im = QPixmap(image)
+        # self.resultImage.setPixmap(res_im)
+        self.resultImage.setPixmap(self.pixmap)
 
 
 if __name__ == '__main__':

@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>20</y>
+      <y>10</y>
       <width>971</width>
-      <height>661</height>
+      <height>751</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -36,14 +36,19 @@
         <x>150</x>
         <y>20</y>
         <width>781</width>
-        <height>171</height>
+        <height>261</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
       </property>
      </widget>
      <widget class="QPushButton" name="outsideText">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>10</x>
         <y>60</y>
         <width>110</width>
         <height>100</height>
@@ -56,8 +61,8 @@
      <widget class="QPushButton" name="outsideImage">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>290</y>
+        <x>10</x>
+        <y>390</y>
         <width>111</width>
         <height>100</height>
        </rect>
@@ -69,8 +74,8 @@
      <widget class="QPushButton" name="saveImage">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>450</y>
+        <x>10</x>
+        <y>550</y>
         <width>111</width>
         <height>100</height>
        </rect>
@@ -83,9 +88,9 @@
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>290</y>
-        <width>300</width>
-        <height>260</height>
+        <y>340</y>
+        <width>350</width>
+        <height>300</height>
        </rect>
       </property>
       <property name="text">
@@ -95,10 +100,10 @@
      <widget class="QLabel" name="resultImage">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>280</y>
-        <width>300</width>
-        <height>260</height>
+        <x>550</x>
+        <y>340</y>
+        <width>350</width>
+        <height>300</height>
        </rect>
       </property>
       <property name="text">
