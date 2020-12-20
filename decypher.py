@@ -1,5 +1,6 @@
-from PIL import Image
+import codecs
 import random
+from PIL import Image
 
 
 def readpix(x, y):
@@ -9,9 +10,7 @@ def readpix(x, y):
 
 
 def revert(numstr):
-    string = ""
-    for i in numstr:
-        string += i.decode('windows-1251')
+    string = codecs.decode(bytes(numstr), 'windows-1251')
     return string
 
 
@@ -25,7 +24,7 @@ def picture_to_string(key, y):
         if p in visited:
             continue
         visited.add(p)
-        ch = readpix(p % y, p // y)
+        ch = readpix(p // y, p % y)
         if ch == 0x03:
             break
         numstr.append(ch)
@@ -38,4 +37,5 @@ pixels = im.load()
 x, y = im.size
 key = input('введите ключ')
 text = picture_to_string(key, y)
-print(str(text))
+res = revert(text)
+print(res)

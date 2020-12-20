@@ -30,14 +30,12 @@ def string_to_picture(key, text, y):
         if p in visited:
             continue
         visited.add(p)
-        change(text[i], p % y, p // y)
+        change(text[i], p // y, p % y)
         i += 1
         if text[i - 1] == 0x03:
             break
 
 
-im2 = Image.new('RGB', (500, 500), (0, 0, 0))
-im2.save('f.bmp')
 name = input('введите путь к изображению')
 im = Image.open(name)
 pixels = im.load()
