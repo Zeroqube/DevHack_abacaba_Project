@@ -172,7 +172,7 @@ Image</string>
      <widget class="QLineEdit" name="keyout">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>180</x>
         <y>310</y>
         <width>401</width>
         <height>41</height>
@@ -209,7 +209,7 @@ Image</string>
 key</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="encrypt">
       <property name="geometry">
        <rect>
         <x>660</x>
@@ -222,6 +222,12 @@ key</string>
        <font>
         <pointsize>14</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+	background-color: red;
+}</string>
       </property>
       <property name="text">
        <string>Encrypt</string>
@@ -261,7 +267,7 @@ image</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>420</y>
+        <y>530</y>
         <width>110</width>
         <height>100</height>
        </rect>
@@ -306,7 +312,7 @@ text</string>
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>380</y>
+        <y>390</y>
         <width>731</width>
         <height>281</height>
        </rect>
@@ -315,6 +321,30 @@ text</string>
        <font>
         <pointsize>14</pointsize>
        </font>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="encryption">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>330</y>
+        <width>110</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+	background-color: red;
+}</string>
+      </property>
+      <property name="text">
+       <string>Encrypt</string>
       </property>
      </widget>
     </widget>
