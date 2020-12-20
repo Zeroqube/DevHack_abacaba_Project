@@ -48,10 +48,10 @@ def string_to_picture(key, text, x, y):
             break
 
 print('''Введите: путь к начальному изображению; ключ; путь к итоговому изображению''')
-data = list(map(str.strip, sys.stdin))
-name = data[0]
-key = data[1]
-name2 = data[2]
+data = list(map(str, sys.stdin))
+name = data[0].strip()
+key = data[1].strip()
+name2 = data[2].strip()
 text = ''.join(data[3:])
 
 im = Image.open(name)
