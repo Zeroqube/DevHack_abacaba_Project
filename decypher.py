@@ -20,10 +20,8 @@ def picture_to_string(key, y):
     numstr = []
     random.seed(key)
     visited = set()
-    p = 300
     while True:
-        #p = random.randint(0, x * y)
-        p += 400
+        p = random.randint(0, x * y)
         if p in visited:
             continue
         visited.add(p)

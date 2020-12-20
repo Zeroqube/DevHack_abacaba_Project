@@ -25,10 +25,8 @@ def string_to_picture(key, text, y):
     random.seed(key)
     text.append(0x03)  # Признак конца текста
     i = 0
-    p = 300
     while True:
-        # p = random.randint(0, x * y)
-        p += 400
+        p = random.randint(0, x * y)
         if p in visited:
             continue
         visited.add(p)
