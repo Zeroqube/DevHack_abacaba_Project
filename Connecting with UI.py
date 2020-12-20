@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
 from random import randint
 from PIL import Image
 from math import factorial
+import pyperclip
 
 
 class MyWidget(QMainWindow):
@@ -20,6 +21,8 @@ class MyWidget(QMainWindow):
         # self.encryptedText.setText('Hello World!!!')
         self.downloadImage.clicked.connect(self.text_save)
         self.saveImage.clicked.connect(self.image_save)
+        self.copy.clicked.connect(self.copy_password)
+        self.paste.clicked.connect(self.paste_password)
 
     def give_image_to_encrypt(self):
         self.image_name = QFileDialog.getOpenFileName(self, 'Выбрать картинку', '', 'Картинка (*.bmp)')[
@@ -61,6 +64,12 @@ class MyWidget(QMainWindow):
             self.keyout.setText(str(randint(0, factorial(x * y) // (factorial(x * y - chars)))))
         except AttributeError:
             QMessageBox.critical(self, "Error!", "Сначала выберите картинку и введите текст для шифровки")
+
+    def copy_password(self):
+        pyperclip.copy(self.keyout.text())
+
+    def paste_password(self):
+        self.decryptkey.setText(pyperclip.paste())
 
 
 if __name__ == '__main__':
